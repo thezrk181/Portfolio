@@ -15,7 +15,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-Ck-rz8tv.css";
+const appCss = "/assets/styles-DVoTuE_R.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -171,7 +171,7 @@ ${urls.join("\n")}
     }
   }
 });
-const $$splitComponentImporter = () => import("./index-D05_qmtj.mjs");
+const $$splitComponentImporter = () => import("./index-qGY64zjB.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

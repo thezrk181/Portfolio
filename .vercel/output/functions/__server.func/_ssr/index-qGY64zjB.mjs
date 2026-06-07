@@ -1,5 +1,6 @@
 import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
 import { L as Lenis } from "../_libs/lenis.mjs";
+import { X, M as Menu } from "../_libs/lucide-react.mjs";
 import { m as motion, A as AnimatePresence } from "../_libs/framer-motion.mjs";
 import "../_libs/motion-dom.mjs";
 import "../_libs/motion-utils.mjs";
@@ -12,6 +13,7 @@ const LINKS = [
 ];
 function Navbar() {
   const [scrolled, setScrolled] = reactExports.useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = reactExports.useState(false);
   reactExports.useEffect(() => {
     const on = () => setScrolled(window.scrollY > 24);
     on();
@@ -22,12 +24,12 @@ function Navbar() {
     "header",
     {
       className: `fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-6"}`,
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "container-xl flex items-center justify-between gap-8 px-6", children: [
+      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "container-xl relative flex items-center justify-between gap-8 px-6", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "a",
           {
             href: "#hero",
-            className: "font-mono text-sm tracking-widest text-foreground/90 hover:text-foreground transition",
+            className: "font-mono text-sm tracking-widest text-foreground/90 hover:text-foreground transition z-50",
             children: [
               "ZK",
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cosmic-violet", children: "." })
@@ -50,12 +52,30 @@ function Navbar() {
           }
         ),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
+          "button",
           {
-            href: "#contact",
-            className: "hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-medium tracking-widest uppercase glass hover:bg-white/8 transition"
+            className: "md:hidden z-50 p-2 text-foreground/90 hover:text-foreground transition",
+            onClick: () => setMobileMenuOpen(!mobileMenuOpen),
+            children: mobileMenuOpen ? /* @__PURE__ */ jsxRuntimeExports.jsx(X, { size: 24 }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Menu, { size: 24 })
           }
-        )
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "div",
+          {
+            className: `absolute top-[120%] left-0 w-full glass border-y border-white/5 flex flex-col items-center md:hidden transition-all duration-300 ${mobileMenuOpen ? "opacity-100 py-6 pointer-events-auto" : "opacity-0 h-0 py-0 pointer-events-none overflow-hidden border-transparent"}`,
+            children: LINKS.map((l) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "a",
+              {
+                href: l.href,
+                onClick: () => setMobileMenuOpen(false),
+                className: "px-4 py-4 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground transition",
+                children: l.label
+              },
+              l.href
+            ))
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden md:block w-8" })
       ] })
     }
   );
@@ -94,7 +114,7 @@ function Hero() {
   const [is3D, setIs3D] = reactExports.useState(false);
   const ctaRef = reactExports.useRef(null);
   reactExports.useEffect(() => {
-    setIs3D(window.innerWidth >= 768);
+    setIs3D(true);
   }, []);
   reactExports.useEffect(() => {
     const btn = ctaRef.current;
