@@ -28,7 +28,7 @@ export function About() {
             <p className="text-lg sm:text-xl text-foreground/90 leading-[1.85]">
               I'm a Computer Science student at{" "}
               <span className="text-foreground font-medium">FAST NUCES</span>, building software
-              that spans the entire stack, from low-level 8086 Assembly to AI-powered RAG
+              that spans the entire stack, from low level 8086 Assembly to AI powered RAG
               pipelines.
             </p>
             <p className="mt-8 text-base sm:text-lg text-muted-foreground leading-[1.9]">

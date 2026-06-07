@@ -14,7 +14,7 @@ export function Contact() {
         <SectionHeader
           eyebrow="05 · Contact"
           title="Let's build something cinematic."
-          kicker="Open to internships, freelance, and collaborations on ambitious projects. The inbox is quiet — feel free to break the silence."
+          kicker="Open to internships, freelance, and collaborations on ambitious projects. The inbox is quiet, feel free to break the silence."
         />
 
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-8">

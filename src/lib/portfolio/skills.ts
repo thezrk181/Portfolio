@@ -23,7 +23,7 @@ export const skillCategories: SkillCategory[] = [
     name: "Frontend",
     icon: "monitor",
     color: "#38BDF8",
-    skills: ["React", "Next.js", "Tailwind CSS", "Three.js", "Framer Motion", "GSAP", "shadcn-ui"],
+    skills: ["React", "Next.js", "Tailwind CSS", "Three.js", "Framer Motion", "GSAP"],
   },
   {
     name: "Backend",
@@ -51,6 +51,6 @@ export const skillCategories: SkillCategory[] = [
     name: "Tools & Platforms",
     icon: "wrench",
     color: "#F59E0B",
-    skills: ["Git", "GitHub", "Vercel", "Cloudinary", "ngrok", "DOSBox", "NASM", "VS Code"],
+    skills: ["Git", "GitHub", "Vercel", "Cloudinary", "ngrok", "DOSBox","Vercel","Render"],
   },
 ];

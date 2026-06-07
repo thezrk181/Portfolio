@@ -9,7 +9,7 @@ export function Experience() {
         <SectionHeader
           eyebrow="04 · Journey"
           title="A timeline of building"
-          kicker="Education, projects, and inflection points — the path so far."
+          kicker="Education, projects, and inflection points, the path so far."
         />
 
         <div className="mt-24 relative">

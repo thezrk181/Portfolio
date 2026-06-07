@@ -9,7 +9,7 @@ export function Skills() {
         <SectionHeader
           eyebrow="02 · Toolkit"
           title="A polyglot's stack"
-          kicker="Five categories, dozens of tools. Picked deliberately — each one earns its keep on real projects."
+          kicker="Five categories, dozens of tools. Picked deliberately, each one earns its keep on real projects."
         />
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
