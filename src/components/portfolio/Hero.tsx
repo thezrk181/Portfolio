@@ -119,7 +119,7 @@ export function Hero() {
           transition={{ delay: 0.7, duration: 0.7 }}
           className="mt-10 max-w-xl text-base sm:text-lg text-muted-foreground leading-[1.9]"
         >
-          I build intelligent systems and full-stack platforms — from AI automations and RAG
+          I build intelligent systems and full-stack platforms, from AI automations and RAG
           pipelines to production-ready web applications.
         </motion.p>
 
