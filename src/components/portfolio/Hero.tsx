@@ -43,7 +43,8 @@ export function Hero() {
   const ctaRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
-    setIs3D(window.innerWidth >= 768);
+    // Enable 3D scene on all devices including mobile
+    setIs3D(true);
   }, []);
 
   useEffect(() => {
