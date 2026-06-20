@@ -51,6 +51,6 @@ export const skillCategories: SkillCategory[] = [
     name: "Tools & Platforms",
     icon: "wrench",
     color: "#F59E0B",
-    skills: ["Git", "GitHub", "Vercel", "Cloudinary", "ngrok", "DOSBox","Vercel","Render"],
+    skills: ["Git", "GitHub", "Vercel", "Cloudinary", "ngrok", "DOSBox","Render"],
   },
 ];
